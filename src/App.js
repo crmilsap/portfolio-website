@@ -1,27 +1,24 @@
-import React from 'react';
-import navbar from './Components/navbar'
+import React, { Component } from 'react';
+import Navbar from './Components/Navbar'
+import CoryMilsap from './Assets/Name'
+import BackgroundVideo from './Components/BackgroundVideo'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       
-       <video> 
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="header">
 
-       </video>
+          <BackgroundVideo/>
+          <CoryMilsap/>
 
-       <img>
-       
-       </img>
+        </header>
 
-       <svg>
-         
-       </svg>
-      </header>
-      <navbar/>
-    </div>
-  );
+        <Navbar/>
+      </div>
+    );
+  }
 }
 
 export default App;

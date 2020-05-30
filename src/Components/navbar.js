@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 function Navbar() {
 
     return (
-        <nav className = 'nav'>
+        <nav>
           <h1>
             About Me
           </h1>

@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body, * {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+
+  font-family: Roboto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.header {
+  margin: 0px;
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.background-video {
+  z-index: -1;
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+/* SVG Text */
+
+svg {
+  z-index: 6;
+  position: relative;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+}
+
+#c {
+  stroke-dasharray: 656;
+  stroke-dashoffset: 656;
+  animation: line-animation 1.5s ease forwards, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#o {
+  stroke-dasharray: 405;
+  stroke-dashoffset: 405;
+  animation: line-animation 1.5s ease forwards 0.3s, fill-animation 0.5s ease forwards 3.5s;
+
+}
+
+#r {
+  stroke-dasharray: 353;
+  stroke-dashoffset: 353;
+  animation: line-animation 1.5s ease forwards 0.6s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#y {
+  stroke-dasharray: 552;
+  stroke-dashoffset: 552;
+  animation: line-animation 1.5s ease forwards 0.9s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#m {
+  stroke-dasharray: 1090;
+  stroke-dashoffset: 1090;
+  animation: line-animation 1.5s ease forwards 1.2s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#i {
+  stroke-dasharray: 386;
+  stroke-dashoffset: 386;
+  animation: line-animation 1.5s ease forwards 1.5s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#l {
+  stroke-dasharray: 366;
+  stroke-dashoffset: 366;
+  animation: line-animation 1.5s ease forwards 1.8s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#s {
+  stroke-dasharray: 561;
+  stroke-dashoffset: 561;
+  animation: line-animation 1.5s ease forwards 2.1s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#a {
+  stroke-dasharray: 572;
+  stroke-dashoffset: 572;
+  animation: line-animation 1.5s ease forwards 2.4s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#p {
+  stroke-dasharray: 634;
+  stroke-dashoffset: 634;
+  animation: line-animation 1.5s ease forwards 2.7s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#apst {
+  stroke-dasharray: 634;
+  stroke-dashoffset: 634;
+  animation: line-animation 1.5s ease forwards 3.0s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+#s2 {
+  stroke-dasharray: 634;
+  stroke-dashoffset: 634;
+  animation: line-animation 1.5s ease forwards 3.3s, fill-animation 0.5s ease forwards 3.5s;
+}
+
+.portfolio {
+  stroke-dasharray: 634;
+  stroke-dashoffset: 634;
+  animation: line-animation 1.5s ease forwards 4s, fill-animation 0.5s ease forwards 5s;
+}
+
+
+@keyframes line-animation{
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fill-animation {
   from {
-    transform: rotate(0deg);
+    fill: transparent;
   }
   to {
-    transform: rotate(360deg);
+    fill: #9f223f;
   }
+}
+
+
+
+
+/* Navbar */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
 }
