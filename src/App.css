@@ -12,142 +12,12 @@ html, body, * {
 
 body {
   font-family: 'Roboto', sans-serif ;
-  width: 100%;
-  height: 100vh;
-}
-
-.header {
-  margin: 0px;
-  position: relative;
-  height: 60vh;
   width: 100vw;
-  overflow: hidden;
-}
-
-.background-video {
-  z-index: -1;
-  position: absolute;
-  width: auto;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 
-
-
-
-
-/* SVG Text */
-
-#name {
-  z-index: 6;
-  position: relative;
-  display: block;
-  top: 50%;
-  left: 20%;
-  transform: translate(0%, -50%);
-  width: auto;
-  height: 50%
-}
-
-.c {
-  stroke-dasharray: 656;
-  stroke-dashoffset: 656;
-  animation: line-animation 1.5s ease forwards, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.o {
-  stroke-dasharray: 405;
-  stroke-dashoffset: 405;
-  animation: line-animation 1.5s ease forwards 0.3s, fill-animation 0.5s ease forwards 3.5s;
-
-}
-
-.r {
-  stroke-dasharray: 353;
-  stroke-dashoffset: 353;
-  animation: line-animation 1.5s ease forwards 0.6s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.y {
-  stroke-dasharray: 552;
-  stroke-dashoffset: 552;
-  animation: line-animation 1.5s ease forwards 0.9s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.m {
-  stroke-dasharray: 1090;
-  stroke-dashoffset: 1090;
-  animation: line-animation 1.5s ease forwards 1.2s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.i {
-  stroke-dasharray: 386;
-  stroke-dashoffset: 386;
-  animation: line-animation 1.5s ease forwards 1.5s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.l {
-  stroke-dasharray: 366;
-  stroke-dashoffset: 366;
-  animation: line-animation 1.5s ease forwards 1.8s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.s {
-  stroke-dasharray: 561;
-  stroke-dashoffset: 561;
-  animation: line-animation 1.5s ease forwards 2.1s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.a {
-  stroke-dasharray: 572;
-  stroke-dashoffset: 572;
-  animation: line-animation 1.5s ease forwards 2.4s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.p {
-  stroke-dasharray: 634;
-  stroke-dashoffset: 634;
-  animation: line-animation 1.5s ease forwards 2.7s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.apst {
-  stroke-dasharray: 634;
-  stroke-dashoffset: 634;
-  animation: line-animation 1.5s ease forwards 3.0s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.s2 {
-  stroke-dasharray: 634;
-  stroke-dashoffset: 634;
-  animation: line-animation 1.5s ease forwards 3.3s, fill-animation 0.5s ease forwards 3.5s;
-}
-
-.portfolio {
-  stroke-dasharray: 634;
-  stroke-dashoffset: 634;
-  animation: line-animation 1.5s ease forwards 4s, fill-animation 0.5s ease forwards 5s;
-}
-
-
-@keyframes line-animation{
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fill-animation {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #9f223f;
-  }
-}
 
 
 
@@ -277,23 +147,6 @@ span.active, span:hover {
 
 
 /* Main Content */
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.content-container {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-}
-
-main section div {
-  margin-top: 80px;
-  width: 800px;
-}
 
 main section div p {
   font-size: 20px;

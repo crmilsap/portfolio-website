@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper, Typography, Tabs, Tab} from "@material-ui/core";
+import Langauges from './Languages';
+import Languages from "./Languages";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -32,13 +31,14 @@ TabPanel.propTypes = {
 };
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  GridContainer: {
     display: "flex",
-    backgroundColor: theme.palette.background.paper,
-    height: 224,
+    width: '100%',
+    height: '100%',
   },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
+  Tabs: {
+    width: '100%',
+    height: '100%',
   },
 }));
 
@@ -51,31 +51,35 @@ export default function VerticalTabs() {
   };
 
   return (
-    <Paper className={classes.root}>
-      <Grid container direction = 'row'>
-        <Grid item xs = {3}>
+    <Paper>
+      <Grid className = {classes.GridContainer} container alignItems = 'flex-start'>
+        <Grid item xs = {3} md = {2} alignItems = 'center'>
           <Tabs
             item
             orientation="vertical"
             variant="standard"
             value={value}
             onChange={handleChange}
-            className={classes.tabs}
+            className={classes.Tabs}
           >
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
+            <Tab label = 'Languages' />
+            <Tab label = 'Frameworks' />
+            <Tab label = 'Libraries' />
+            <Tab label = 'Other' />
           </Tabs>
         </Grid>
-        <Grid item xs = {5}>
+        <Grid item xs = {9} md = {9}>
           <TabPanel item value={value} index={0}>
-            Item One
+            <Languages/>
           </TabPanel>
           <TabPanel item value={value} index={1}>
             Item Two
           </TabPanel>
           <TabPanel value={value} index={2}>
             Item Three
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            Item Four
           </TabPanel>
         </Grid>
       </Grid>

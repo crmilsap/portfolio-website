@@ -1,12 +1,21 @@
 import React from 'react';
 import VerticalTab from './VerticalTab';
-import {Grid} from '@material-ui/core'
+import {Grid, makeStyles} from '@material-ui/core'
+
+const useStyles = makeStyles((theme) => ({
+    GridContainer: {
+        marginTop: '80px',
+    },
+  }));
 
 
 export default function Proficiencies() {
 
+
+    const classes = useStyles();
     return (
-        <Grid 
+        <Grid
+        className = {classes.GridContainer} 
         container 
         direction = 'column'>
             <Grid item> 
