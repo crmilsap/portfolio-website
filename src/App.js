@@ -1,14 +1,15 @@
 import React  from "react";
 import Navbar from "./Components/Navbar";
-import CoryMilsap from "./Assets/Name";
-import BackgroundVideo from "./Components/BackgroundVideo";
-import About from "./Components/About";
+import CoryMilsap from "./Components/Header/Name";
+import BackgroundVideo from "./Components/Header/BackgroundVideo";
+import About from "./Components/Welcome";
 import QuickFacts from "./Components/QuickFacts";
 import Proficiencies from "./Components/Proficiencies";
+import Experience from './Components/Experience';
 import { Grid, makeStyles } from "@material-ui/core";
-import "./App.css";
+import classNames from 'classnames';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   header: {
     margin: "0px",
     position: "relative",
@@ -22,9 +23,16 @@ const useStyles = makeStyles({
     flexDirection: 'column',
   },
   WideGrid: {
-    width: '80%',
+    minWidth: '80%',
   },
-});
+  TopMargin: {
+    marginTop: 75,
+
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 25,
+    },
+  },
+}));
 
 const App = () => {
   const classes = useStyles();
@@ -39,17 +47,29 @@ const App = () => {
       <Navbar />
 
       <main>
-        <section className= {classes.ContentContainer}>
-          <Grid container direction="column" alignItems = 'center'>
-            <Grid item xs = {10} md = {6}>
+        <section className={classes.ContentContainer}>
+          <Grid container direction="column" alignItems="center">
+            <Grid
+              container
+              item
+              xs={11}
+              md={6}
+              className={classNames(classes.WideGrid, classes.TopMargin)}
+              alignItems="center"
+              justify="space-around"
+            >
               <About />
             </Grid>
 
-            <Grid item xs = {10} md = {6}>
+            <Grid item xs={11} md={6}>
               <QuickFacts />
             </Grid>
 
-            <Grid item xs = {12} className = {classes.WideGrid}>
+            <Grid item xs={11} md={9} className={classes.WideGrid}>
+              <Experience />
+            </Grid>
+
+            <Grid item xs={10} md={9} className={classes.WideGrid}>
               <Proficiencies />
             </Grid>
           </Grid>

@@ -2,29 +2,46 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core';
+import 'typeface-roboto';
 
-let theme = createMuiTheme({});
+
+let theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#b71c1c',
+      light: '#f05545',
+      dark: '#7f0000'
+    },
+    secondary: {
+      main: '#e0e0e0',
+      light: '#4f5b62',
+      dark: '#000a12',
+    }
+  },
+  typography: {
+    h1: {
+      fontSize: '2.2rem',
+    },
+    h2: {
+      fontSize: '1rem',
+    },
+    body1: {
+      fontSize: '1rem',
+    }
+  }
+});
 
 theme = responsiveFontSizes(theme);
 
-theme.typography.h1 = {
-  fontSize: '1.2rem',
-  '@media (min-width: 600px)': {
-    fontSize: '2rem',
+theme.overrides = {
+  MuiTooltip: {
+    tooltip: {
+      fontSize: '1,5rem',
+    },
   },
-  [theme.breakpoints.up('md')]: {
-    fontSize: '2.5rem',
-  },
-};
+  typography: {
 
-theme.typography.subtitle1 = {
-  fontSize: '1.2rem',
-  // '@media (min-width: 600px)': {
-  //   fontSize: '2rem',
-  // },
-  // [theme.breakpoints.up('md')]: {
-  //   fontSize: '2.5rem',
-  // },
+  }
 };
 
 ReactDOM.render(

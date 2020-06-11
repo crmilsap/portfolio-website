@@ -2,9 +2,7 @@ import React from "react";
 import { makeStyles, Paper, Typography, Grid, Box } from "@material-ui/core";
 
 const useStyles = makeStyles({
-  boldFont: {
-    fontWeight: "",
-  },
+
   baselineText: {
     padding: 0,
   },
@@ -16,17 +14,17 @@ const useStyles = makeStyles({
   },
 });
 
-const makeRow = (leftSide, rightSide, props = '') => {
+const makeRow = (leftSide, rightSide) => {
   return (
     <>
       <Grid item xs={3} align="right">
-        <Typography variant="subtitle1"> {leftSide}:</Typography>
+        <Typography variant="body1">
+          <Box fontWeight="fontWeightBold">{leftSide}:</Box>
+        </Typography>
       </Grid>
       <Grid item xs={1} />
       <Grid item xs={8}>
-        <Typography variant="subtitle1">
-          <Box fontWeight="fontWeightRegular" {...props}> {rightSide}</Box>
-        </Typography>
+        <Typography variant="body1">{rightSide}</Typography>
       </Grid>
     </>
   );
@@ -34,7 +32,7 @@ const makeRow = (leftSide, rightSide, props = '') => {
 export default function QuickFacts() {
   const classes = useStyles();
   return (
-    <Paper elevation="15" className={classes.factsContainer}>
+    <Paper elevation={15} className={classes.factsContainer}>
       <Typography color="primary" align="center" variant="h1" gutterBottom>
         Quick Facts
       </Typography>

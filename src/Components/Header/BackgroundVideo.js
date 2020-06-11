@@ -1,5 +1,5 @@
 import React from 'react'
-import campusVid from './../Assets/campus.mp4'
+import campusVid from './../../Assets/campus.mp4'
 import { makeStyles } from '@material-ui/core';
 
 

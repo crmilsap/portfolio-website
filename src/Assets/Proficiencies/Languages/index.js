@@ -1,17 +1,44 @@
-import C from './C';
-import CPP from './CPP';
-import CSS3 from './CSS3';
-import HTML5 from './HTML5';
-import Javascript from './Javascript';
-import SQL from './MS-SQL';
-import Python from './Python';
+import C from './CLogo.jpg';
+import Cpp from './CppLogo.jpg';
+import CSS from './CSS3Logo.jpg';
+import HTML from './HTML5Logo.jpg';
+import Java from './JavaLogo.jpg';
+import Javascript from './JSLogo.jpg';
+import MSSQL from './MSSQLLogo.jpg';
+import Python from './PythonLogo.jpg';
 
-export {
-    C,
-    CPP,
-    CSS3,
-    HTML5,
-    Javascript,
-    SQL,
-    Python,
-}
+const images = [
+  {
+    title: 'Javascript',
+    image: Javascript,
+  },
+  {
+    title: 'Python',
+    image: Python
+  },
+  {
+    title: 'C++',
+    image: Cpp,
+  },
+  {
+    title: 'C',
+    image: C,
+  },
+  {
+    title: 'MS SQL',
+    image: MSSQL,
+  },
+  {
+    title: 'Java',
+    image: Java,
+  },
+  {
+    title: 'CSS',
+    image: CSS,
+  },
+  {
+    title: 'HTML5',
+    image: HTML,
+  },
+];
+export default images

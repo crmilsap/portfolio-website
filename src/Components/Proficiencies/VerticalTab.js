@@ -1,9 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Paper, Typography, Tabs, Tab} from "@material-ui/core";
-import Langauges from './Languages';
-import Languages from "./Languages";
+import { Grid, Paper, Typography, Tabs, Tab, useMediaQuery} from "@material-ui/core";
+import CardList from "./CardList";
+import LanguagesImages from '../../Assets/Proficiencies/Languages';
+import FrameworkImages from '../../Assets/Proficiencies/Frameworks';
+import LibrariesImages from '../../Assets/Proficiencies/Libraries';
+import OtherImages from '../../Assets/Proficiencies/Other';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -16,7 +19,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Typography component="div" style={{ padding: 24 }}>
+        <Typography component="div" style={{ padding: 10, paddingLeft: 24 }}>
           {props.children}
         </Typography>
       )}
@@ -35,51 +38,59 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: '100%',
     height: '100%',
+    minHeight: '308px',
   },
   Tabs: {
-    width: '100%',
+    width: '80vw',
     height: '100%',
   },
 }));
 
-export default function VerticalTabs() {
+export default function VerticalTabs({labels}) {
   const classes = useStyles();
+
   const [value, setValue] = React.useState(0);
+  const verticalOrientation = useMediaQuery('(min-width: 960px)');
+  const orientation = verticalOrientation ? 'vertical' : 'horizontal';
+  const variant = verticalOrientation ? 'standard': 'scrollable';
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+
   return (
-    <Paper>
+    <Paper className = {classes.GridContainer}>
       <Grid className = {classes.GridContainer} container alignItems = 'flex-start'>
-        <Grid item xs = {3} md = {2} alignItems = 'center'>
+        <Grid item xs = {12} md = {3}>
           <Tabs
             item
-            orientation="vertical"
-            variant="standard"
+            indicatorColor = 'primary'
+            orientation={orientation}
+            variant={variant}
             value={value}
+            scrollButtons = 'auto'
             onChange={handleChange}
             className={classes.Tabs}
           >
-            <Tab label = 'Languages' />
-            <Tab label = 'Frameworks' />
-            <Tab label = 'Libraries' />
-            <Tab label = 'Other' />
+            {labels.map(l => {
+              return <Tab label = {l}/>
+            })}
+
           </Tabs>
         </Grid>
-        <Grid item xs = {9} md = {9}>
+        <Grid item xs = {12} md = {9}>
           <TabPanel item value={value} index={0}>
-            <Languages/>
+            <CardList imagesObject = {LanguagesImages}/>
           </TabPanel>
           <TabPanel item value={value} index={1}>
-            Item Two
+            <CardList imagesObject = {FrameworkImages}/>
           </TabPanel>
           <TabPanel value={value} index={2}>
-            Item Three
+            <CardList imagesObject = {LibrariesImages}/>
           </TabPanel>
           <TabPanel value={value} index={3}>
-            Item Four
+            <CardList imagesObject = {OtherImages}/>
           </TabPanel>
         </Grid>
       </Grid>
