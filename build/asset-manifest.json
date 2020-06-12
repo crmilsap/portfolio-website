@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.js": "/static/js/main.d81bd42c.chunk.js",
+    "main.js.map": "/static/js/main.d81bd42c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9a184eb6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9a184eb6.js.map",
+    "static/css/2.47271137.chunk.css": "/static/css/2.47271137.chunk.css",
+    "static/js/2.abecece2.chunk.js": "/static/js/2.abecece2.chunk.js",
+    "static/js/2.abecece2.chunk.js.map": "/static/js/2.abecece2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.256ed84bda5c6010e075be98c5db56fc.js": "/precache-manifest.256ed84bda5c6010e075be98c5db56fc.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.47271137.chunk.css.map": "/static/css/2.47271137.chunk.css.map",
+    "static/js/2.abecece2.chunk.js.LICENSE.txt": "/static/js/2.abecece2.chunk.js.LICENSE.txt",
+    "static/media/CLogo.jpg": "/static/media/CLogo.7815ac16.jpg",
+    "static/media/CppLogo.jpg": "/static/media/CppLogo.9ccdf948.jpg",
+    "static/media/Excel.jpg": "/static/media/Excel.6a2ca247.jpg",
+    "static/media/HTML5Logo.jpg": "/static/media/HTML5Logo.97a94166.jpg",
+    "static/media/Illustrator.jpg": "/static/media/Illustrator.f5e980da.jpg",
+    "static/media/JSLogo.jpg": "/static/media/JSLogo.cbfc3733.jpg",
+    "static/media/JavaLogo.jpg": "/static/media/JavaLogo.1918ee1b.jpg",
+    "static/media/MSSQLLogo.jpg": "/static/media/MSSQLLogo.65129e16.jpg",
+    "static/media/PandasLogo.jpg": "/static/media/PandasLogo.6f493074.jpg",
+    "static/media/Photoshop.jpg": "/static/media/Photoshop.d9409c1a.jpg",
+    "static/media/ProfilePicture.jpg": "/static/media/ProfilePicture.a6969ffe.jpg",
+    "static/media/PythonLogo.jpg": "/static/media/PythonLogo.343f3bc7.jpg",
+    "static/media/ReactJSLogo.jpg": "/static/media/ReactJSLogo.684895b2.jpg",
+    "static/media/campus.mp4": "/static/media/campus.291a36b4.mp4",
+    "static/media/index.css": "/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a184eb6.js",
+    "static/css/2.47271137.chunk.css",
+    "static/js/2.abecece2.chunk.js",
+    "static/js/main.d81bd42c.chunk.js"
+  ]
+}
