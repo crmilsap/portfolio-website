@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import Navbar from "./Components/Navbar";
-import CoryMilsap from "./Components/Header/Name";
-import BackgroundVideo from "./Components/Header/BackgroundVideo";
+import Navbar from "./Components/Navbar.js";
+import CoryMilsap from "./Components/Header/Name.js";
+import BackgroundVideo from "./Components/Header/BackgroundVideo.js";
 import About from "./Components/Welcome";
 import QuickFacts from "./Components/QuickFacts";
 import Proficiencies from "./Components/Proficiencies";
