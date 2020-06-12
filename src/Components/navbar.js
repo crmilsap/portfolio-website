@@ -31,7 +31,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+
+const scrollToRef = (ref) =>
+  window.scrollTo({
+    top: ref.current.offsetTop - 100,
+    left: 0,
+    behavior: "smooth",
+  });
+
+
+export default function ButtonAppBar(props) {
   const classes = useStyles();
 
   const [dropdown, setDropdown] = useState(false);
@@ -46,6 +55,11 @@ export default function ButtonAppBar() {
     setAnchorEl(null);
   }
 
+  const handleScrollToAbout = () => scrollToRef(props.aboutRef)
+  const handleScrollToExperience = () => scrollToRef(props.experienceRef)
+  const handleScrollToProficiencies = () => scrollToRef(props.proficienciesRef)
+  const handleScrollToContact = () => scrollToRef(props.contactRef)
+
   if (dropdown !== isMDScreen) setDropdown(!dropdown);
 
   return (
@@ -57,10 +71,10 @@ export default function ButtonAppBar() {
           </Typography>
           {dropdown && (
             <>
-              <Button color="inherit">About</Button>
-              <Button color="inherit">Experience</Button>
-              <Button color="inherit">Proficiencies</Button>
-              <Button color="inherit">Contact</Button>
+              <Button color="inherit" onClick = {handleScrollToAbout}>About</Button>
+              <Button color="inherit" onClick = {handleScrollToExperience}>Experience</Button>
+              <Button color="inherit" onClick = {handleScrollToProficiencies}>Proficiencies</Button>
+              <Button color="inherit" onClick = {handleScrollToContact}>Contact</Button>
             </>
           )}
           {!dropdown && (
@@ -80,10 +94,10 @@ export default function ButtonAppBar() {
                 className = {classes.menu}
                 onClose = {handleClose}
               >
-                <MenuItem> About </MenuItem>
-                <MenuItem> Experience </MenuItem>
-                <MenuItem> Proficiencies</MenuItem>
-                <MenuItem> Contact</MenuItem>
+                <MenuItem onClick = {handleScrollToAbout}> About </MenuItem>
+                <MenuItem onClick = {handleScrollToExperience}> Experience </MenuItem>
+                <MenuItem onClick = {handleScrollToProficiencies}> Proficiencies</MenuItem>
+                <MenuItem onClick = {handleScrollToContact}> Contact</MenuItem>
               </Menu>
             </>
           )}

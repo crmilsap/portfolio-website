@@ -1,4 +1,4 @@
-import React  from "react";
+import React, { useRef } from "react";
 import Navbar from "./Components/Navbar";
 import CoryMilsap from "./Components/Header/Name";
 import BackgroundVideo from "./Components/Header/BackgroundVideo";
@@ -6,6 +6,7 @@ import About from "./Components/Welcome";
 import QuickFacts from "./Components/QuickFacts";
 import Proficiencies from "./Components/Proficiencies";
 import Experience from './Components/Experience';
+import Contact from './Components/Contact';
 import { Grid, makeStyles } from "@material-ui/core";
 import classNames from 'classnames';
 
@@ -32,10 +33,18 @@ const useStyles = makeStyles(theme => ({
       marginTop: 25,
     },
   },
+
+  margin100: {
+    marginTop: 100,
+  },
 }));
 
 const App = () => {
   const classes = useStyles();
+  const contactRef = useRef(null);
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const proficienciesRef = useRef(null);
 
   return (
     <>
@@ -44,7 +53,12 @@ const App = () => {
         <CoryMilsap />
       </header>
 
-      <Navbar />
+      <Navbar
+        aboutRef={aboutRef}
+        experienceRef={experienceRef}
+        proficienciesRef={proficienciesRef}
+        contactRef={contactRef}
+      />
 
       <main>
         <section className={classes.ContentContainer}>
@@ -57,6 +71,7 @@ const App = () => {
               className={classNames(classes.WideGrid, classes.TopMargin)}
               alignItems="center"
               justify="space-around"
+              innerRef = {aboutRef}
             >
               <About />
             </Grid>
@@ -65,12 +80,23 @@ const App = () => {
               <QuickFacts />
             </Grid>
 
-            <Grid item xs={11} md={9} className={classes.WideGrid}>
+            <Grid item xs={11} md={9} className={classes.WideGrid} innerRef = {experienceRef}>
               <Experience />
             </Grid>
 
-            <Grid item xs={10} md={9} className={classes.WideGrid}>
+            <Grid item xs={10} md={9} className={classes.WideGrid} innerRef = {proficienciesRef}>
               <Proficiencies />
+            </Grid>
+
+            <Grid
+              item
+              xs={11}
+              md={6}
+              className={classes.margin100}
+              alignItems="center"
+              innerRef={contactRef}
+            >
+              <Contact />
             </Grid>
           </Grid>
         </section>

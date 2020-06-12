@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, Typography, Grid } from "@material-ui/core";
+import { makeStyles, Typography, Grid, useMediaQuery } from "@material-ui/core";
 import MediaCard from './MediaCard';
 
 const useStyles = makeStyles(theme => ({
@@ -11,6 +11,10 @@ const useStyles = makeStyles(theme => ({
 
 
 const Description = classes => {
+
+  const isMDScreen = useMediaQuery("(min-width: 600px)");
+  const headerAlignment = isMDScreen ? 'left' : 'center';
+
   return (
     <>
       <Typography
@@ -18,6 +22,7 @@ const Description = classes => {
         color="primary"
         gutterBottom
         className={classes.heading}
+        align = {headerAlignment}
       >
         Welcome!
       </Typography>

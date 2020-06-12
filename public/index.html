@@ -14,5 +14,13 @@
   <body style="width: 100%; height: 100vh; overflow-x: hidden; margin: 0; padding: 0;">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!-- Help for the Netlify post-processing bots -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+    
   </body>
 </html>
