@@ -64,7 +64,6 @@ export default function VerticalTabs({labels}) {
       <Grid className = {classes.GridContainer} container alignItems = 'flex-start'>
         <Grid item xs = {12} md = {3}>
           <Tabs
-            item
             indicatorColor = 'primary'
             orientation={orientation}
             variant={variant}
@@ -74,16 +73,16 @@ export default function VerticalTabs({labels}) {
             className={classes.Tabs}
           >
             {labels.map(l => {
-              return <Tab label = {l}/>
+              return <Tab key = {l} label = {l}/>
             })}
 
           </Tabs>
         </Grid>
         <Grid item xs = {12} md = {9}>
-          <TabPanel item value={value} index={0}>
+          <TabPanel value={value} index={0}>
             <CardList imagesObject = {LanguagesImages}/>
           </TabPanel>
-          <TabPanel item value={value} index={1}>
+          <TabPanel value={value} index={1}>
             <CardList imagesObject = {FrameworkImages}/>
           </TabPanel>
           <TabPanel value={value} index={2}>

@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import classNames from 'classnames';
 
 const useStyles = makeStyles(theme => ({
   /* SVG Text */

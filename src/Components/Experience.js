@@ -41,7 +41,7 @@ const MakeRow = (position, company, description, location, dates) => {
         <ul>
           {description.map((point) => {
             return (
-              <li>
+              <li key = {point}>
                 <Typography variant="body1">{point}</Typography>
               </li>
             );

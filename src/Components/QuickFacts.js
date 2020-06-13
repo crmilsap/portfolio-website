@@ -18,7 +18,7 @@ const makeRow = (leftSide, rightSide) => {
   return (
     <>
       <Grid item xs={3} align="right">
-        <Typography variant="body1">
+        <Typography variant="body1" component = {'span'}>
           <Box fontWeight="fontWeightBold">{leftSide}:</Box>
         </Typography>
       </Grid>

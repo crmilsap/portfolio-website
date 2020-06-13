@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import { TextField, Grid, Typography, makeStyles, Button } from '@material-ui/core';
 import { Alert } from '@material-ui/lab'
 import NetlifyForm from 'react-netlify-form'
@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 }))
 export default function Contact() {
   const classes = useStyles();
-  const contactRef = useRef(null)
+
   const handleClose = (event, reason) => {
     if (reason === 'clickaway')
       return;

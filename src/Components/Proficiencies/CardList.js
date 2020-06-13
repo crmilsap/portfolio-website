@@ -32,9 +32,9 @@ const useStyles = makeStyles( theme => ({
 const createCards = (imagesObj, classes) => {
 
   return (
-    imagesObj.map(obj => {
+    imagesObj.map((obj, index) => {
       return (
-        <Grid item className = {classes.itemWidth}>
+        <Grid item className = {classes.itemWidth} key = {index}>
         <Tooltip title={obj.title}>
           <Card className={classes.root}>
             <CardActionArea>
