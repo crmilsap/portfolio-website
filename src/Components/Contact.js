@@ -65,12 +65,14 @@ export default function Contact() {
                   <TextField
                     className={classes.fullWidth}
                     required
+                    name="Name"
                     label="Name"
                     variant="outlined"
                   />
                 </Grid>
                 <Grid item xs={6}>
                   <TextField
+                    name="Email"
                     className={classes.fullWidth}
                     required
                     label="Email"
@@ -81,6 +83,7 @@ export default function Contact() {
                 <Grid item xs={12}>
                   <TextField
                     className={classes.fullWidth}
+                    name="Message"
                     required
                     multiline
                     label="Message"
