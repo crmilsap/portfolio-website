@@ -34,8 +34,8 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
-  margin100: {
-    marginTop: 100,
+  margin150: {
+    marginTop: 150,
   },
 }));
 
@@ -90,6 +90,7 @@ const App = () => {
 
             <Grid
               item
+              className = {classes.margin150}
               xs={11}
               md={6}
               innerRef={contactRef}
