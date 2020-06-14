@@ -23,107 +23,11 @@ const useStyles = makeStyles(theme => ({
   
   cory: {
     stroke: theme.palette.secondary.main,
-    animatin : `$fill-animatino 0.5s ${theme.transitions.easing.easeInOut} forwards 1s`
+    animatin : `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 1s`
   }, 
   milsap: {
     stroke: theme.palette.secondary.main,
-    animatin : `$fill-animatino 0.5s ${theme.transitions.easing.easeInOut} forwards 2s`
-  },
-  c: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: '656px',
-    strokeDashoffset: '656px',
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards, 
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  o: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 405,
-    strokeDashoffset: 405,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 0.3s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  r: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 353,
-    strokeDashoffset: 353,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 0.6s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-    
-  },
-
-  y: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 552,
-    strokeDashoffset: 552,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 0.9s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  m: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 1090,
-    strokeDashoffset: 1090,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 1.2s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  i: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 386,
-    strokeDashoffset: 386,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 1.5s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  l: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 366,
-    strokeDashoffset: 366,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 1.8s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  s: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 561,
-    strokeDashoffset: 561,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 2.1s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  a: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 572,
-    strokeDashoffset: 572,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 2.4s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  p: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 634,
-    strokeDashoffset: 634,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 2.7s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  apst: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 634,
-    strokeDashoffset: 634,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 3.0s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
-  },
-
-  s2: {
-    stroke: theme.palette.secondary.main,
-    strokeDasharray: 634,
-    strokeDashoffset: 634,
-    animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 3.3s,
-                $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
+    animatin : `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 2s`
   },
 
   portfolio: {
@@ -139,9 +43,11 @@ const useStyles = makeStyles(theme => ({
 
   '@keyframes fill-animation': {
     '0%': {
+      stroke: 'transparent',
       fill: "transparent",
     },
     '100%': {
+      stroke: theme.palette.secondary.main,
       fill: theme.palette.primary.main,
     },
   },
