@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
   },
   Tabs: {
     width: '80vw',
-    maxWidth: '80vw',
     height: '100%',
   },
 }));
