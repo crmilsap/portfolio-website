@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Grid, Box, useMediaQuery, Divider, makeStyles, Link, Icon } from "@material-ui/core";
+import { Typography, Grid, Box, useMediaQuery, Divider, makeStyles, Link } from "@material-ui/core";
 import LinkIcon from '@material-ui/icons/Link';
 
 const useStyles = makeStyles(theme => ({
