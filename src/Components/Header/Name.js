@@ -22,17 +22,14 @@ const useStyles = makeStyles(theme => ({
   },
   
   cory: {
-    stroke: theme.palette.secondary.main,
-    animation : `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 1s`
+    animation : `$fill-animation 1s ${theme.transitions.easing.easeInOut} forwards 0.5s`
   }, 
   milsap: {
-    stroke: theme.palette.secondary.main,
-    animation : `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 2s`
+    animation : `$fill-animation 1s ${theme.transitions.easing.easeInOut} forwards 1.5s`
   },
 
   portfolio: {
-    stroke: theme.palette.secondary.main,
-    animation: `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 2.5s`,
+    animation: `$fill-animation 1s ${theme.transitions.easing.easeInOut} forwards 2.5s`,
   },
 
   '@keyframes line-animation': {

@@ -62,7 +62,7 @@ const App = () => {
 
       <main>
         <section className={classes.ContentContainer}>
-          <Grid container direction="column" alignItems="center">
+          <Grid container direction="column" alignItems="center" spacing = {5}>
             <Grid
               container
               item
@@ -92,7 +92,6 @@ const App = () => {
               item
               xs={11}
               md={6}
-              className={classes.margin100}
               innerRef={contactRef}
             >
               <Contact />
