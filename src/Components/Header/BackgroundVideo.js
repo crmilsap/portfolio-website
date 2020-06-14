@@ -20,7 +20,7 @@ export default function BackgroundVideo() {
   const classes = useStyles();
 
     return (
-      <video  loop autoPlay muted className = {classes.video}>
+      <video playsInline loop autoPlay muted className = {classes.video}>
         <source src= { campusVid } type="video/mp4" />Your browser does not support the video tag.
       </video>
     );
