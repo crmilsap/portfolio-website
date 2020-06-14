@@ -23,11 +23,11 @@ const useStyles = makeStyles(theme => ({
   
   cory: {
     stroke: theme.palette.secondary.main,
-    animatin : `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 1s`
+    animation : `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 1s`
   }, 
   milsap: {
     stroke: theme.palette.secondary.main,
-    animatin : `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 2s`
+    animation : `$fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 2s`
   },
 
   portfolio: {
