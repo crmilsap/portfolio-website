@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     zIndex: 3,
     minHeight: 64,
+    cursor: 'default',
   },
 
   menu: {
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     fontSize: 30,
+    cursor: 'pointer',
   },
 }));
 
@@ -38,7 +40,6 @@ const scrollToRef = (ref) =>
     left: 0,
     behavior: "smooth",
   });
-
 
 export default function ButtonAppBar(props) {
   const classes = useStyles();
@@ -55,10 +56,11 @@ export default function ButtonAppBar(props) {
     setAnchorEl(null);
   }
 
-  const handleScrollToAbout = () => scrollToRef(props.aboutRef)
-  const handleScrollToExperience = () => scrollToRef(props.experienceRef)
-  const handleScrollToProficiencies = () => scrollToRef(props.proficienciesRef)
-  const handleScrollToContact = () => scrollToRef(props.contactRef)
+  const handleScrollToAbout = () => scrollToRef(props.aboutRef);
+  const handleScrollToExperience = () => scrollToRef(props.experienceRef);
+  const handleScrollToProficiencies = () => scrollToRef(props.proficienciesRef);
+  const handleScrollToContact = () => scrollToRef(props.contactRef);
+  const handleScrollToTop = () => window.scrollTo(0,0);
 
   if (dropdown !== isMDScreen) setDropdown(!dropdown);
 
@@ -66,7 +68,7 @@ export default function ButtonAppBar(props) {
     <div className={classes.root}>
       <AppBar position="sticky" style={{ minHeight: 64 }}>
         <Toolbar>
-          <Typography variant="h4" className={classes.title}>
+          <Typography variant="h4" className={classes.title} onClick = {handleScrollToTop}>
             Cory Milsap
           </Typography>
           {dropdown && (

@@ -26,13 +26,15 @@ const useStyles = makeStyles(theme => ({
   },
   
   c: {
-    strokeDasharray: 656,
-    strokeDashoffset: 656,
+    stroke: theme.palette.secondary.main,
+    strokeDasharray: '656px',
+    strokeDashoffset: '656px',
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards, 
                 $fill-animation 0.5s ${theme.transitions.easing.easeInOut} forwards 4s`,
   },
 
   o: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 405,
     strokeDashoffset: 405,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 0.3s,
@@ -40,6 +42,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   r: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 353,
     strokeDashoffset: 353,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 0.6s,
@@ -48,6 +51,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   y: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 552,
     strokeDashoffset: 552,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 0.9s,
@@ -55,6 +59,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   m: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 1090,
     strokeDashoffset: 1090,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 1.2s,
@@ -62,6 +67,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   i: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 386,
     strokeDashoffset: 386,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 1.5s,
@@ -69,6 +75,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   l: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 366,
     strokeDashoffset: 366,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 1.8s,
@@ -76,6 +83,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   s: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 561,
     strokeDashoffset: 561,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 2.1s,
@@ -83,6 +91,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   a: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 572,
     strokeDashoffset: 572,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 2.4s,
@@ -90,6 +99,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   p: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 634,
     strokeDashoffset: 634,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 2.7s,
@@ -97,6 +107,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   apst: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 634,
     strokeDashoffset: 634,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 3.0s,
@@ -104,6 +115,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   s2: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 634,
     strokeDashoffset: 634,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 3.3s,
@@ -111,6 +123,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   portfolio: {
+    stroke: theme.palette.secondary.main,
     strokeDasharray: 634,
     strokeDashoffset: 634,
     animation: `$line-animation 1.5s ${theme.transitions.easing.easeInOut} forwards 5s,
@@ -119,8 +132,7 @@ const useStyles = makeStyles(theme => ({
 
   '@keyframes line-animation': {
     '100%': {
-      stroke: theme.palette.secondary.main,
-      strokeDashoffset: 0,
+      strokeDashoffset: '0px',
     },
   },
 

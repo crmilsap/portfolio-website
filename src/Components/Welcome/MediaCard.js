@@ -46,13 +46,13 @@ export default function MediaCard() {
         title="Profile Picture"
       />
       <CardActions disableSpacing className={classes.spaceEvenly}>
-        <Link href="https://www.linkedin.com/in/corymilsap/">
+        <Link href="https://www.linkedin.com/in/corymilsap/" target = '_blank'>
           <IconButton>
             <LinkedInIcon />
           </IconButton>
         </Link>
 
-        <Link href="https://github.com/crmilsap">
+        <Link href="https://github.com/crmilsap" target = '_blank'>
           <IconButton>
             <GithubIcon />
           </IconButton>
