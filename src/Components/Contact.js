@@ -1,35 +1,64 @@
-import React from 'react';
-import { TextField, Grid, Typography, makeStyles, Button } from '@material-ui/core';
-import { Alert } from '@material-ui/lab'
-import NetlifyForm from 'react-netlify-form'
+import React from "react";
+import {
+  TextField,
+  Grid,
+  Typography,
+  makeStyles,
+  Button,
+} from "@material-ui/core";
+import { Alert } from "@material-ui/lab";
+import NetlifyForm from "react-netlify-form";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   fullWidth: {
-    width: '100%',
+    width: "100%",
   },
-
-}))
+  margin10: {
+    margin: "10 0 10 0",
+  },
+}));
 export default function Contact() {
   const classes = useStyles();
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway')
-      return;
-  }
-  
+    if (reason === "clickaway") return;
+  };
+
   return (
     <>
-      <Typography align = 'center' variant="h1" color="primary" gutterBottom>
+      <Typography align="center" variant="h1" color="primary" gutterBottom>
         Contact Me!
       </Typography>
       <NetlifyForm name="Contact Form">
         {({ loading, error, success }) => (
           <div>
-            {loading && <Alert onClose = {handleClose} severity = 'warning'> Loading...</Alert>}
-            {error && (
-              <Alert onClose = {handleClose} severity = 'error'>Your information was not sent. Please try again later.</Alert>
+            {loading && (
+              <Alert
+                className={classes.margin10}
+                onClose={handleClose}
+                severity="warning"
+              >
+                Loading...
+              </Alert>
             )}
-            {success && <Alert onClose = {handleClose} severity = 'success'> Thank you for contacting me! </Alert>}
+            {error && (
+              <Alert
+                className={classes.margin10}
+                onClose={handleClose}
+                severity="error"
+              >
+                Your information was not sent. Please try again later.
+              </Alert>
+            )}
+            {success && (
+              <Alert
+                className={classes.margin10}
+                onClose={handleClose}
+                severity="success"
+              >
+                Thank you for contacting me!
+              </Alert>
+            )}
             {!loading && !success && (
               <Grid container spacing={1}>
                 <Grid item xs={6}>
@@ -60,7 +89,14 @@ export default function Contact() {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button type = 'submit' variant = 'contained' color = 'primary' className = {classes.fullWidth}>Submit</Button>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    className={classes.fullWidth}
+                  >
+                    Submit
+                  </Button>
                 </Grid>
               </Grid>
             )}
