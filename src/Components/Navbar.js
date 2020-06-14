@@ -60,7 +60,7 @@ export default function ButtonAppBar(props) {
   const handleScrollToExperience = () => scrollToRef(props.experienceRef);
   const handleScrollToProficiencies = () => scrollToRef(props.proficienciesRef);
   const handleScrollToContact = () => scrollToRef(props.contactRef);
-  const handleScrollToTop = () => window.scrollTo(0,0);
+  const handleScrollToTop = () => window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
 
   if (dropdown !== isMDScreen) setDropdown(!dropdown);
 

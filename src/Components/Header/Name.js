@@ -20,10 +20,6 @@ const useStyles = makeStyles(theme => ({
       left: '20%',
     },
   },
-
-  secondaryColorStroke: {
-    stroke: theme.palette.secondary.main,
-  },
   
   c: {
     stroke: theme.palette.secondary.main,
