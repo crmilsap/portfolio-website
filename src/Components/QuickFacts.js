@@ -136,38 +136,3 @@ export default function QuickFactsCard() {
     </Card>
   );
 }
-
-// import React from "react";
-// import { makeStyles, Paper, Typography, Grid, Box } from "@material-ui/core";
-
-// const useStyles = makeStyles({
-
-//   baselineText: {
-//     padding: 0,
-//   },
-//   factsContainer: {
-//     width: 275,
-//     padding: "10px 5px 10px 5px",
-//     borderRadius: "5px",
-//     margin: "100px 0px 100px 0px",
-//   },
-// });
-
-// export default function QuickFacts() {
-//   const classes = useStyles();
-//   return (
-//     <Paper elevation={15} className={classes.factsContainer}>
-//       <Typography color="primary" align="center" variant="h1" gutterBottom>
-//         Quick Facts
-//       </Typography>
-
-//       <Grid container>
-//         {makeRow('Major', 'Computer Science')}
-//         {makeRow('Year', 'Rising Junior')}
-//         {makeRow('GPA', '3.96/4.00')}
-//         {makeRow('ACT', '35/36')}
-//       </Grid>
-
-//     </Paper>
-//   );
-// }
