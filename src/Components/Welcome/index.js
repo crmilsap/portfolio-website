@@ -27,9 +27,9 @@ const Description = (classes) => {
       <Typography paragraph>
         My name is Cory Milsap and I am from Overland Park, KS. I am a Computer
         Science major at the University of Alabama. Using React and Material-UI,
-        I put together this personal portfolio site. I am most interested in buy
-        side financial work, data science, and software engineering. Feel free to reach
-        out for inquiries.
+        I put together this personal portfolio site. I am most interested in
+        buy-side investing, data science, and software engineering. Feel free to
+        reach out for inquiries.
         <br />
         <br />
         Thanks for visiting!
