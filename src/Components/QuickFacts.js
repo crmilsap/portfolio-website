@@ -123,7 +123,7 @@ export default function QuickFactsCard() {
             </li>
             <li>
               <Typography>
-                2018: The "Trader Jon Memorial Scholarship"
+                2018: The "Trader Jon" Memorial Scholarship
               </Typography>
             </li>
           </ul>

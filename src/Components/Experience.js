@@ -120,7 +120,7 @@ const Experience = () => {
           "Student Mentor",
           "UA Honors College Connections Program",
           [
-            "Led a small group of 12 college freshmen in weekly classes, representing the University and Honor's College",
+            "Led a small group of 12 college freshmen in weekly classes, representing the University and Honors College",
           ],
           "Tuscaloosa, AL",
           "August 2019 – December 2019"
