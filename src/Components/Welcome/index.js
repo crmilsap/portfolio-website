@@ -1,19 +1,17 @@
 import React from "react";
 import { makeStyles, Typography, Grid, useMediaQuery } from "@material-ui/core";
-import MediaCard from './MediaCard';
+import MediaCard from "./MediaCard";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   heading: {
     marginBottom: 20,
-    alignSelf: 'flex-start',
+    alignSelf: "flex-start",
   },
 }));
 
-
-const Description = classes => {
-
+const Description = (classes) => {
   const isMDScreen = useMediaQuery("(min-width: 600px)");
-  const headerAlignment = isMDScreen ? 'left' : 'center';
+  const headerAlignment = isMDScreen ? "left" : "center";
 
   return (
     <>
@@ -22,15 +20,16 @@ const Description = classes => {
         color="primary"
         gutterBottom
         className={classes.heading}
-        align = {headerAlignment}
+        align={headerAlignment}
       >
         Welcome!
       </Typography>
       <Typography paragraph>
         My name is Cory Milsap and I am from Overland Park, KS. I am a Computer
         Science major at the University of Alabama. Using React and Material-UI,
-        I put together this personal portfolio site. Feel free to reach out for
-        inquiries.
+        I put together this personal portfolio site. I am most interested in buy
+        side financial work, data science, and software engineering. Feel free to reach
+        out for inquiries.
         <br />
         <br />
         Thanks for visiting!
@@ -49,7 +48,7 @@ export default function About() {
         {Description(classes)}
       </Grid>
       <Grid item>
-        <MediaCard/>
+        <MediaCard />
       </Grid>
     </>
   );

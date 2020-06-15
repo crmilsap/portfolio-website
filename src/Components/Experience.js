@@ -71,8 +71,7 @@ const Experience = () => {
           'Data Science Intern',
           'Vulcan Value Partners',
           [
-            'Work on team of four with goal of valuing every public company daily using long-only, value-investing strategies',
-            'Developed a text annotator website to train natural language processing modules on financial documents',
+            'Contact for a copy of my resume',
           ],
           'Birmingham, AL',
           'April 2020 – Present',
