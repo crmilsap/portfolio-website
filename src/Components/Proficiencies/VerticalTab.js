@@ -38,9 +38,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: '100%',
     minHeight: '308px',
+    borderRadius: 30,
   },
   Tabs: {
-    width: '80vw',
+    width: 'auto',
     height: '100%',
   },
 }));

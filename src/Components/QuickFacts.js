@@ -14,13 +14,13 @@ import {
 } from "@material-ui/core/";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import LinkIcon from '@material-ui/icons/Link';
+import LinkIcon from "@material-ui/icons/Link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 275,
     padding: "0px 5px 0px 5px",
-    borderRadius: "5px",
+    borderRadius: 30,
     margin: "100px 0px 100px 0px",
   },
   expand: {
@@ -34,11 +34,11 @@ const useStyles = makeStyles((theme) => ({
     transform: "rotate(180deg)",
   },
   contentContainer: {
-    padding: '15px 0px 5px 0px',
+    padding: "15px 0px 5px 0px",
   },
   actionContainter: {
-    padding: '0px 0px 0px 0px',
-    justifyContent: 'flex-end'
+    padding: "0px 0px 0px 0px",
+    justifyContent: "flex-end",
   },
 }));
 
@@ -67,8 +67,8 @@ export default function QuickFactsCard() {
   };
 
   return (
-    <Card className={classes.root}>
-      <CardContent className = {classes.contentContainer}>
+    <Card className={classes.root} elevation = {15}>
+      <CardContent className={classes.contentContainer}>
         <Typography color="primary" align="center" variant="h1" gutterBottom>
           Quick Facts
         </Typography>
@@ -94,34 +94,41 @@ export default function QuickFactsCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography variant="body1" color="primary">
-            UA Scholarships
+          <Typography variant="body1" color="black">
+            {" "}
+            <Box fontWeight="fontWeightBold">UA Scholarships</Box>
           </Typography>
           <ul>
             <li>
-              <Typography>UA Presidential Scholarship</Typography>
+              <Typography>Presidential Scholarship</Typography>
             </li>
             <li>
-              <Typography>UA Engineering Leadership Scholarship</Typography>
+              <Typography>Engineering Leadership Scholarship</Typography>
             </li>
           </ul>
-          <Typography variant = 'body1' color = 'primary'> Tailhook Educational Foundation </Typography><Link href = 'https://www.tailhook.net/tef-home' target = '_blank'><LinkIcon/></Link>
+          <Typography variant="body1" color="black">
+            {" "}
+            <Box fontWeight="fontWeightBold">
+              Tailhook Educational Foundation
+            </Box>{" "}
+          </Typography>
+          <Link href="https://www.tailhook.net/tef-home" target="_blank">
+            <LinkIcon />
+          </Link>
           <ul>
             <li>
               <Typography>
-                2019: USS Oriskany (CV-34) "The
-                Mighty O" Scholarship
+                2019: USS Oriskany (CV-34) "The Mighty O" Scholarship
               </Typography>
             </li>
             <li>
               <Typography>
-                2018: The "Trader Jon Memorial
-                Scholarship"
+                2018: The "Trader Jon Memorial Scholarship"
               </Typography>
             </li>
           </ul>
-          <Typography variant="body1" color="primary">
-            Accomplishments
+          <Typography variant="body1" color="black">
+            <Box fontWeight="fontWeightBold">Accomplishments</Box>
           </Typography>
           <ul>
             <li>
