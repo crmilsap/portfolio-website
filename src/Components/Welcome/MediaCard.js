@@ -5,8 +5,12 @@ import ProfilePicture from '../../Assets/ProfilePicture.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 300,
+    width: 350,
     borderRadius: 30,
+
+    [theme.breakpoints.down("sm")]: {
+      width: 285,
+    },
   },
 
   media: {

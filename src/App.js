@@ -1,9 +1,6 @@
 import React, { useRef } from "react";
 import Navbar from "./Components/Navbar";
-import CoryMilsap from "./Components/Header/Name";
-import BackgroundVideo from "./Components/Header/BackgroundVideo";
 import About from "./Components/Welcome";
-import QuickFacts from "./Components/QuickFacts";
 import Proficiencies from "./Components/Proficiencies";
 import Experience from './Components/Experience';
 import Contact from './Components/Contact';
@@ -11,18 +8,8 @@ import { Grid, makeStyles } from "@material-ui/core";
 import classNames from 'classnames';
 
 const useStyles = makeStyles(theme => ({
-  header: {
-    margin: "0px",
-    position: "relative",
-    height: "60vh",
-    width: "100vw",
-    overflow: "hidden",
-  },
-  ContentContainer: {
-    padding: '20px',
-    display: 'flex',
-    flexDirection: 'column',
-  },
+
+
   WideGrid: {
     minWidth: '80%',
   },
@@ -48,10 +35,6 @@ const App = () => {
 
   return (
     <>
-      <header className={classes.header}>
-        <BackgroundVideo />
-        <CoryMilsap />
-      </header>
 
       <Navbar
         aboutRef={aboutRef}
@@ -62,25 +45,22 @@ const App = () => {
 
       <main>
         <section className={classes.ContentContainer}>
-          <Grid container direction="column" alignItems="center" spacing = {5}>
+          <Grid container direction="column" alignItems="center" justify = 'center' spacing = {5}>
             <Grid
               container
               item
+              spacing = {5}
               xs={11}
               md={6}
               className={classNames(classes.WideGrid, classes.TopMargin)}
               alignItems="center"
-              justify="space-around"
+              justify="center"
               innerRef = {aboutRef}
             >
               <About />
             </Grid>
 
-            <Grid item xs={11} md={6}>
-              <QuickFacts />
-            </Grid>
-
-            <Grid item xs={11} md={9} className={classes.WideGrid} innerRef = {experienceRef}>
+            <Grid item xs={10} md={9} className={classes.WideGrid} innerRef = {experienceRef}>
               <Experience />
             </Grid>
 
@@ -91,7 +71,7 @@ const App = () => {
             <Grid
               item
               className = {classes.margin150}
-              xs={11}
+              xs={10}
               md={6}
               innerRef={contactRef}
             >

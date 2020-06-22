@@ -1,6 +1,6 @@
 import PandasLogo from './PandasLogo.jpg';
+import BeautifulSoupLogo from './BeautifulSoupLogo.jpg';
 import Excel from '../Other/Excel.jpg';
-import PythonLogo from '../Languages/PythonLogo.jpg';
 
 const images = [
   {
@@ -9,7 +9,7 @@ const images = [
   },
   {
     title: 'BeautifulSoup',
-    image: PythonLogo,
+    image: BeautifulSoupLogo,
   },
   {
     title: 'XLSXWriter',

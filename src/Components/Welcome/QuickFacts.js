@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     width: 275,
     padding: "0px 5px 0px 5px",
     borderRadius: 30,
-    margin: "100px 0px 100px 0px",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -40,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px 0px 0px 0px",
     justifyContent: "flex-end",
   },
+  contentDropDown: {
+    padding: '0px 0px 0px 20px',
+  }
 }));
 
 const makeRow = (leftSide, rightSide) => {
@@ -93,9 +95,8 @@ export default function QuickFactsCard() {
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
+        <CardContent className = {classes.contentDropDown}>
           <Typography variant="body1" color="black">
-            {" "}
             <Box fontWeight="fontWeightBold">UA Scholarships</Box>
           </Typography>
           <ul>

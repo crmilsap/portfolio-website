@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles, Typography, Grid, useMediaQuery } from "@material-ui/core";
+import QuickFacts from "./QuickFacts";
 import MediaCard from "./MediaCard";
 
 const useStyles = makeStyles((theme) => ({
@@ -26,15 +27,9 @@ const Description = (classes) => {
       </Typography>
       <Typography paragraph>
         My name is Cory Milsap and I am from Overland Park, KS. I am a Computer
-        Science major at the University of Alabama. Using React and Material-UI,
-        I put together this personal portfolio site. I am most interested in
+        Science major at the University of Alabama. I am most interested in
         buy-side investing, data science, and software engineering. Feel free to
         reach out for inquiries.
-        <br />
-        <br />
-        Thanks for visiting!
-        <br />
-        Cory
       </Typography>
     </>
   );
@@ -44,10 +39,15 @@ export default function About() {
   const classes = useStyles();
   return (
     <>
-      <Grid item xs={10} md={6}>
-        {Description(classes)}
+      <Grid container direction = 'column' alignItems = 'center' spacing = {4} item xs={11} md={6}>
+        <Grid item>
+          {Description(classes)}
+          </Grid>
+          <Grid item>
+            <QuickFacts/>
+          </Grid>
       </Grid>
-      <Grid item>
+      <Grid container item xs = {11} md = {6} justify = 'center'>
         <MediaCard />
       </Grid>
     </>

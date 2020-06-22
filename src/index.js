@@ -28,7 +28,7 @@ let theme = createMuiTheme({
     body1: {
       fontSize: '1rem',
     }
-  }
+  },
 });
 
 theme = responsiveFontSizes(theme);
@@ -39,9 +39,14 @@ theme.overrides = {
       fontSize: '1,5rem',
     },
   },
-  typography: {
-
-  }
+  MuiCardContent: {
+    root: {
+      padding: 0,
+      "&:last-child": {
+        paddingBottom: 5,
+     },
+    },
+  },
 };
 
 ReactDOM.render(

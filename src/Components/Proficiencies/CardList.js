@@ -4,38 +4,38 @@ import {
   Card,
   CardActionArea,
   CardMedia,
-  Tooltip,
   Grid,
+  CardContent,
+  Typography,
 } from "@material-ui/core";
 
-
-const useStyles = makeStyles( theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: "100%",
   },
   media: {
-    height: '100%',
+    height: "100%",
   },
   itemWidth: {
     width: 160,
 
-    [theme.breakpoints.only('sm')]: {
+    [theme.breakpoints.only("sm")]: {
       width: 120,
     },
 
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("xs")]: {
       width: 95,
     },
+  },
+  cardContent: {
+    padding: 5,
   },
 }));
 
 const createCards = (imagesObj, classes) => {
-
-  return (
-    imagesObj.map((obj, index) => {
-      return (
-        <Grid item className = {classes.itemWidth} key = {index}>
-        <Tooltip title={obj.title}>
+  return imagesObj.map((obj, index) => {
+    return (
+      <Grid item className={classes.itemWidth} key={index}>
           <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
@@ -44,21 +44,22 @@ const createCards = (imagesObj, classes) => {
                 image={obj.image}
               />
             </CardActionArea>
+            <CardContent className = {classes.cardContent}>
+              <Typography variant = 'body1' align = 'center'> {obj.title} </Typography>
+            </CardContent>
           </Card>
-        </Tooltip>
-        </Grid>
-      );
-    })
-  );
-}
-export default function ImgMediaCard({imagesObject}) {
+      </Grid>
+    );
+  });
+};
+export default function ImgMediaCard({ imagesObject }) {
   // ImagesObject holds the image and the title for the tooltip
-  
+
   const classes = useStyles();
 
   return (
-  <Grid container spacing = {4} justify = 'center'>
-    {createCards(imagesObject, classes)}
-  </Grid>
+    <Grid container spacing={4} justify="center">
+      {createCards(imagesObject, classes)}
+    </Grid>
   );
 }

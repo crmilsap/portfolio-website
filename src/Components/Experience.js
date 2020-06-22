@@ -58,7 +58,7 @@ const Experience = () => {
   const classes = useStyles();
 
   return (
-    <Grid container direction='column'>
+    <Grid container direction='column' style={{ marginTop: 50 }}>
       <Grid item>
         <Typography
           variant='h1'
