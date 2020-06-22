@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
     width: 160,
 
     [theme.breakpoints.only("sm")]: {
-      width: 120,
+      width: 140,
     },
 
     [theme.breakpoints.down("xs")]: {
-      width: 95,
+      width: 140,
     },
   },
   cardContent: {
