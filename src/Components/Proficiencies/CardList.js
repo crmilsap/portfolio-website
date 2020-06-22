@@ -12,6 +12,7 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+    borderRadius: '0px 0px 15px 15px',
   },
   media: {
     height: "100%",
