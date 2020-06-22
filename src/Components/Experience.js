@@ -71,7 +71,7 @@ const Experience = () => {
           'Data Science Intern',
           'Vulcan Value Partners',
           [
-            'Contact for a copy of my resume',
+            'Description cannot be public facing. Contact me for a copy of my resume.',
           ],
           'Birmingham, AL',
           'April 2020 – Present',
