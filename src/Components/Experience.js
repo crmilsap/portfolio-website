@@ -68,13 +68,24 @@ const Experience = () => {
           Work Experience
         </Typography>
         {MakeRow(
+          "Financial Engineering Analyst",
+          "Goldman Sachs",
+          [
+            ' '
+          ],
+          "Dallas, TX",
+          "Incoming Summer 2021",
+        )}
+        <Divider className = {classes.Divider}/>
+
+        {MakeRow(
           'Data Science Intern',
           'Vulcan Value Partners',
           [
             'Description cannot be public facing. Contact me for a copy of my resume.',
           ],
           'Birmingham, AL',
-          'April 2020 – Present',
+          'April 2020 – September 2020',
           'https://www.vulcanvaluepartners.com'
         )}
       </Grid>
