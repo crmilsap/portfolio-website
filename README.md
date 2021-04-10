@@ -2,4 +2,4 @@ This project is a manner to host all information in one place relevant to the 20
 
 It was created using React and Material-UI. Components are self explanatory.
 
-- CM
+CM
